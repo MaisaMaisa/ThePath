@@ -6,14 +6,17 @@
     <link rel="stylesheet" type="text/css" href="/style/style.css"/>
 </head>
 
-<body id = "body" background="/views/images/thepath.png">
+<body id = "firstbody" >
 
-<div class="hoscroll">
-        <img class="lazy" data-src="images/Untitled-1.png" />
-</div>
-<div >
+<form id= "insertm" action="/path/<%=pathId%>" method="post">
+        <input id="inputForm" type='text' placeholder='Write a milestone' name='Body'>
+        <input id="sad" type="submit" value="Define a milestone"/>
+        <button type="button" id="addm" >Show milestones</button>
+</form>
+
+<div>
     <% if (locals.path !== undefined) { %>
-    <marquee behavior="alternate"><span class="marquee"> <i>Your path :  <%=path%></i></span></marquee>
+    <marquee behavior="scroll" direction= "right"><span class="marquee" style="width:15%"> <i>Your path :  <%=path%></i></span></marquee>
     <% } %>
         
     <% if (locals.myMilestone !== undefined) { %>
@@ -21,20 +24,14 @@
 
     <% if (milestones) { %>
         <% milestones.forEach( (milestone) => { %>
-        <ol>
-            <li id= "milestoned">
+        <ul>
+            <li id = "milestoned">
             <%= milestone.Body %>
             </li>
-        </ol>
+        </ul>
         <%})%>
     <% } %>
 </div> 
-
-<form action="/path/<%=pathId%>" method="post">
-    <input id="inputForm" type='text' placeholder='Your milestone' name='Body'>
-    <input id="sad" class="btn btn-primary" id="setmm" type="submit" value="Set a milestone"/>
-    <button type="button" id="addm" >Add milestone</button>
-</form>
 
 <div class="milestones">
     <ul id= "mile" style="list-style-type:none;">
@@ -108,12 +105,84 @@
         </form>
 </div>
 
+<div class="form4">
+    <button id="close4" style="float: right;">X</button>
+    <form  id>
+        <textarea id= "txt3">Write something about this step. .  .</textarea>
+        <br>
+        <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+        <br>
+        Add a relevant link: <input type="url" name="link">
+        <br>
+        <br>
+        <button type="button" id="saveall4">Save all</button>
+    </form>
 </div>
+
+<div class="form5">
+    <button id="close5" style="float: right;">X</button>
+    <form  id>
+        <textarea id= "txt5">Write something about this step. .  .</textarea>
+        <br>
+        <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+        <br>
+        Add a relevant link: <input type="url" name="link">
+        <br>
+        <br>
+        <button type="button" id="saveall5">Save all</button>
+    </form>
+</div>
+
+<div class="form6">
+    <button id="close6" style="float: right;">X</button>
+    <form  id>
+        <textarea id= "txt6">Write something about this step. .  .</textarea>
+        <br>
+        <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+        <br>
+        Add a relevant link: <input type="url" name="link">
+        <br>
+        <br>
+        <button type="button" id="saveall6">Save all</button>
+    </form>
+</div>
+
+<div class="form7">
+    <button id="close3" style="float: right;">X</button>
+    <form  id>
+        <textarea id= "txt7">Write something about this step. .  .</textarea>
+        <br>
+        <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+        <br>
+        Add a relevant link: <input type="url" name="link">
+        <br>
+        <br>
+        <button type="button" id="saveall7">Save all</button>
+    </form>
+</div>
+
+<div class="form8">
+    <button id="close8" style="float: right;">X</button>
+    <form  id>
+        <textarea id= "txt8">Write something about this step. .  .</textarea>
+        <br>
+        <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
+        <br>
+        Add a relevant link: <input type="url" name="link">
+        <br>
+        <br>
+        <button type="button" id="saveall8">Save all</button>
+    </form>
+</div>
+</div>
+
 </body>
 
 <script type="text/javascript">
     $(document).ready(function() {
-    
+        $('#sad').click(function(){
+            $('#marquee').show()
+        });
     //appearance of the first milestones
         $('#addm').click(function(){
             $('#milestone').fadeIn(2000);

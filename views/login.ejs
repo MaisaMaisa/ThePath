@@ -1,9 +1,12 @@
 <% include ./partials/header%>
+
+<body class="bg">
 <% include ./partials/offlinenavbar%>
 
 <form class= "lovelyform" form action="/login" method="post">
 <input id= "userinput" type="text" placeholder="Username" name="username" required>
 <input id= "passinput" type="password" placeholder="Password" name="password" required>
+<br>
 <button id= "loginbutton" type="submit">Log in</button>
 </form>
 

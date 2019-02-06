@@ -1,17 +1,19 @@
 <% include ./partials/header%>
+
+<body class="bg">
 <% include ./partials/navbar%>
 
 <div class="container row">
     <div class="jumbotron col-sm-4 pull-center">
-        <form action="/create" method="post">
-            <h2>This is where your Path begins </h2>
+        <form id= "definepath" raction="/create" method="post">
+            <p id="h2">What is the name of the path you'd like to follow? </p>
             <div>
-                <label>What is in the end of your Path?</label>
+                <label>.</label>
                 <br>
-                <input type="text" name="Goal" />
+                <input type="text" name="Goal" size="16"  />
             </div>
             <div>
-                <input class="btn btn-primary" type="submit" value="Follow The Path" />
+                <input id= "followbutton" class="btn btn-primary" type="submit" value="Follow The Path" />
             </div>
         </form>
     </div>

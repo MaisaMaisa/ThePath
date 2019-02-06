@@ -1,12 +1,26 @@
 <% include ./partials/header%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body class="bg">
+
 <% include ./partials/navbar%>
-<h1>Hello <%=username%>, isn't it a lovely day to achieve something?</h1>
+<div id= "hello">
+<p id= "hey">Hello <%=username%>, isn't it a lovely day to achieve something?</h1>
 <br>
-<h3> Navigate through your profile to find your path(s)...Create various paths for various reasons and work your way through them. .  .
-<h4> Ideas ideas: 
-<br>travelling a lot, 
-<br>finding a partner, 
+<p id= "heyo"> Navigate through your profile to find your path(s)...Create various paths for various reasons and work your way through them. .  .
+<p id= "heyoy"> <u>Ideas ideas:</u> 
+<br>Travel a lot, 
+<br>Find a partner, 
 <br>digital detox, 
-<br>and learning to code.</h4>
-</h3>
+<br>or Learn coding.</h4>
+</p>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#heyo").fadeOut(9000);
+        $("heyoy").fadeOut().slideUp();
+    });
+
+</script>
+
 <% include ./partials/footer%>
