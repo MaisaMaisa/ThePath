@@ -4,13 +4,13 @@
 <% include ./partials/navbar%>
 
 <div class="container row">
-    <div class="jumbotron col-sm-4 pull-center">
+    <div class="col-sm-4 pull-center">
         <form id= "definepath" raction="/create" method="post">
             <p id="h2">What is the name of the path you'd like to follow? </p>
             <div>
                 <label>.</label>
                 <br>
-                <input type="text" name="Goal" size="16"  />
+                <input id= "createsth" type="text" name="Goal" id="goal"/>
             </div>
             <div>
                 <input id= "followbutton" class="btn btn-primary" type="submit" value="Follow The Path" />
